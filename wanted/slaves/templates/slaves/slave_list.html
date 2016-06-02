@@ -16,13 +16,13 @@
             {% for object in object_list %}
                 <tr>
                     <td>
-                        <a href="{{ object.get_absolute_url }}">
-                            {{ object.s_fname }}
+                        <a href="sla{{ object.pk }}">
+                            {{ object.fname }}
                         </a>
                     </td>
-                    <td>{{ object.s_lname }}</td>
-                    <td>{{ object.s_descr }}</td>
-                    <td>{{ object.s_join_date}}</td>
+                    <td>{{ object.lname }}</td>
+                    <td>{{ object.descr }}</td>
+                    <td>{{ object.join_date}}</td>
                 </tr>
             {% endfor %}
             </tbody>
@@ -35,7 +35,7 @@
             </tfoot>
         </table>
     {% else %}
-        No expenses.... yet!
+        No slaves.... yet!
     {% endif %}
 
 

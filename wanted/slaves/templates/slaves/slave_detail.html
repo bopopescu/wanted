@@ -6,15 +6,15 @@
 
     <ul class="list-group">
         <li class="list-group-item">
-            {{ object.s_fname }}
+            {{ object.fname }}
         </li>
         <li class="list-group-item">
-            {{ object.s_lname }}
+            {{ object.lname }}
         </li>
         <li class="list-group-item">
-            {{ object.s_descr }}
+            {{ object.descr }}
         </li>
-        {% if object.s_descr %}
+        {% if object.descr %}
             <li class="list-group-item">
                 {{ object.descr|linebreaks }}
             </li>
@@ -22,7 +22,9 @@
         {% if object.cv %}
             <li class="list-group-item">
                 <img src="{{ object.cv.url }}" class="img-responsive">
-
+<a class="btn btn-primary btn-lg" href="{{ object.cv.url }}">
+   Download PDF
+</a>
             </li>
         {% endif %}
     </ul>

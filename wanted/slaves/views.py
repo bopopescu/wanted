@@ -33,3 +33,8 @@ class ListSlavesView(ListView):
 
     def get_queryset(self):
         return super().get_queryset() #.filter(account__user=self.request.user) .aggregate(sum=Sum('amount'))['sum']
+class DetailSlaveView(DetailView) :
+    model = models.Slave
+    def get_fname(self):
+        return super().get_object().fname
+    page_title = "דגדגדגד"
