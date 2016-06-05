@@ -18,8 +18,10 @@ from django.contrib import admin
 from django.shortcuts import render
 from . import views
 
+
+
 urlpatterns = [
     url(r'^$',views.index) ,
-    url(r'^sl', include('slaves.urls')) ,
+    url(r'^sl/', include('slaves.urls')) ,
     url(r'^admin/', admin.site.urls),
 ]

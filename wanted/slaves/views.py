@@ -1,3 +1,4 @@
+from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import render
 
 # Create your views here.
@@ -37,7 +38,7 @@ class CreateSlave(CreateView):
     model = models.Slave
     page_title = "create slave"
     fields = ['fname', 'lname', 'descr', 'cv']
-
+    success_url = reverse_lazy('slaves:list')
 
 #    form_class = forms.FormAddSlaveView
 #    class Meta:

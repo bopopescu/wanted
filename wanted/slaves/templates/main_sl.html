@@ -1,8 +1,9 @@
 {% load staticfiles %}
+{% load bootstrap3 %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <link rel="stylesheet" href="{% static "bstr/css/bootstrap.css" %}" >
+    <link rel="stylesheet" href="{% static "bstr/css/bootstrap.css" %}" >
     <meta charset="UTF-8">
     <title>
         {% block title %}
@@ -13,8 +14,9 @@
 <body background="{% static "w.jpg" %}"
     style="background-repeat: repeat-y;background-position: center top; background-size: cover;">
 
+<img src="{% static "WANTED.png" %}">
 
-<div width="100%" style="position: absolute;bottom: 30%;">
+<div style="vertical-align: bottom;"> <!-- width="100%" style="position: absolute;bottom: 30%;"> -->
        {% block content %}
             CONTENT
         {% endblock %}
