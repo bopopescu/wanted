@@ -76,22 +76,6 @@ WSGI_APPLICATION = 'wanted.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-DATABASES = {
-    # postgres on virtualbox
-    '_default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'wanted',
-        'USER': 'admin',
-        'PASSWORD': 'admin',
-        'HOST': '192.168.7.59',
-        'PORT': '5432',
-
-    },
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
@@ -135,3 +119,4 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = BASE_DIR + "/uploads"
 MEDIA_URL = "/uploads/"
+from .local_settings import *

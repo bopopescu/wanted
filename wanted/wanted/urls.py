@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.shortcuts import render
+from wanted.wanted import settings
 from . import views
 
 
@@ -25,3 +26,7 @@ urlpatterns = [
     url(r'^sl/', include('slaves.urls')) ,
     url(r'^admin/', admin.site.urls),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
