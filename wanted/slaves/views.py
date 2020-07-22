@@ -14,9 +14,9 @@ def ShowSl(req):
     return render(req, "main_sl.html")
 
 
-class ListSlavesView(ListView):
-    page_title = "Slaves"
-    model = models.Slave
+class ListSubordinatesView(ListView):
+    page_title = "Subordinates"
+    model = models.Subordinate
 
     # def get_queryset(self):
     #    return super().get_queryset().filter(account__user=self.request.user)
@@ -25,8 +25,8 @@ class ListSlavesView(ListView):
         return super().get_queryset()  # .filter(account__user=self.request.user) .aggregate(sum=Sum('amount'))['sum']
 
 
-class DetailSlaveView(DetailView):
-    model = models.Slave
+class DetailSubordinateView(DetailView):
+    model = models.Subordinate
 
     def get_fname(self):
         return super().get_object().fname
@@ -34,15 +34,15 @@ class DetailSlaveView(DetailView):
     page_title = "דגדגדגד"
 
 
-class CreateSlave(CreateView):
-    model = models.Slave
-    page_title = "create slave"
+class CreateSubordinate(CreateView):
+    model = models.Subordinate
+    page_title = "create subordinate"
     fields = ['fname', 'lname', 'descr', 'cv']
-    success_url = reverse_lazy('slaves:list')
+    success_url = reverse_lazy('subordinates:list')
 
-#    form_class = forms.FormAddSlaveView
+#    form_class = forms.FormAddSubordinateView
 #    class Meta:
-#        model = models.Slave
+#        model = models.Subordinate
 #       fields = '__all__'
 
 # fields = '__all__'

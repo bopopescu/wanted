@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'slaves',
+    'subordinates',
 
     'django_extensions',
     'bootstrap3',

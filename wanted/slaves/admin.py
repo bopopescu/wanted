@@ -7,10 +7,10 @@ from . import models
 # admin.site.register(for x in models.models)
 # [x for x in models])
 
-# for model in apps.get_models():# (get_app('slaves')):
+# for model in apps.get_models():# (get_app('subordinates')):
 #    admin.site.register(model)
 
 # admin.site.register(x for x in models)
-admin.site.register([models.Master, models.Slave, models.Role])
+admin.site.register([models.Main, models.Subordinate, models.Role])
 # admin.site.register(models.Role)
-# admin.site.register(models.Slave)
+# admin.site.register(models.Subordinate)

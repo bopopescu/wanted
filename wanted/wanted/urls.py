@@ -23,7 +23,7 @@ from . import views
 
 urlpatterns = [
     url(r'^$',views.index) ,
-    url(r'^sl/', include('slaves.urls')) ,
+    url(r'^sl/', include('subordinates.urls')) ,
     url(r'^admin/', admin.site.urls),
 ]
 

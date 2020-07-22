@@ -8,27 +8,27 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('slaves', '0001_initial'),
+        ('subordinates', '0001_initial'),
     ]
 
     operations = [
         migrations.RenameField(
-            model_name='master',
+            model_name='main',
             old_name='s_descr',
             new_name='m_descr',
         ),
         migrations.RenameField(
-            model_name='master',
+            model_name='main',
             old_name='s_fname',
             new_name='m_fname',
         ),
         migrations.RenameField(
-            model_name='master',
+            model_name='main',
             old_name='s_join_date',
             new_name='m_join_date',
         ),
         migrations.RenameField(
-            model_name='master',
+            model_name='main',
             old_name='s_lname',
             new_name='m_lname',
         ),

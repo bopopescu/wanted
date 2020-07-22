@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Master',
+            name='Main',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('s_fname', models.CharField(max_length=15)),
@@ -31,11 +31,11 @@ class Migration(migrations.Migration):
                 ('lname', models.CharField(max_length=15)),
                 ('r_descr', models.TextField()),
                 ('join_date', models.DateField(auto_now=True)),
-                ('posted_by', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='slaves.Master')),
+                ('posted_by', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='subordinates.Main')),
             ],
         ),
         migrations.CreateModel(
-            name='Slave',
+            name='Subordinate',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('s_fname', models.CharField(max_length=15)),
